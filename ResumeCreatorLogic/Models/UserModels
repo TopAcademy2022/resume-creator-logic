@@ -1,0 +1,7 @@
+class User {
+    private String loginUser;
+
+    private String passwordUser;
+    
+    private List <String> listResume; 
+}
