@@ -1,0 +1,19 @@
+class Resume {
+
+    public String FilePatchFoto;
+
+    public String Fio;
+
+    public String Educetion;
+
+    public String WorkExperience;
+
+    public String DesiredSalary;
+
+    public int Age;
+
+    public String AdditionalInformation;
+
+    public String FilePatchWord;
+
+}
