@@ -33,6 +33,13 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
 
+    - name: Check for Gradle Wrapper Files
+      run: |
+        if [ ! -f "gradlew" ] || [ ! -f "gradle/wrapper/gradle-wrapper.jar" ] || [ ! -f "gradle/wrapper/gradle-wrapper.properties" ]; then
+          echo "::error::Gradle Wrapper files are missing or incomplete. Please ensure 'gradlew', 'gradle/wrapper/gradle-wrapper.jar', and 'gradle/wrapper/gradle-wrapper.properties' are added to your Git repository."
+          exit 1
+        fi
+
     - name: Make gradlew executable
       run: chmod +x gradlew
 
