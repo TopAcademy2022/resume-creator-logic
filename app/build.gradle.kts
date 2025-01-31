@@ -41,3 +41,20 @@ tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+tasks.withType<Jar> {
+    manifest {
+        attributes(mapOf(
+            "Main-Class" to "resume.creator.logic.App"
+        ))
+    }
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+     from(configurations.runtimeClasspath.get().map { file ->
+          if (file.isDirectory) {
+              file
+          } else {
+             zipTree(file)
+         }
+     })
+
+}
