@@ -16,4 +16,6 @@ public class Resume {
     public String AdditionalInformation;
 
     public String PathToResumeTemplate;
+
+    public String PathToFile;
 }
