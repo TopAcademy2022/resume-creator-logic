@@ -1,8 +1,15 @@
-package resume.creator.logic.models;
+package resume.creator.logic.services;
+
+import java.util.ArrayList;
+
+import resume.creator.logic.models.*;
 
 public class UserService {
 
     public boolean CheckloginAndPassword(User userToCheck) {
+        if(userToCheck.Resume == null) {
+            userToCheck.Resume = new ArrayList<Resume>();
+        }
         if (userToCheck.Login.equals("admin") && userToCheck.Password.equals("admin")) {
             return true; 
         }

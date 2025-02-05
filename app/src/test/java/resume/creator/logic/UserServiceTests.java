@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import resume.creator.logic.models.Resume;
 import resume.creator.logic.models.User;
-import resume.creator.logic.models.UserService;
+import resume.creator.logic.services.UserService;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -29,7 +29,7 @@ class UserServiceTests {
         resume.PathToPhoto = "text";
         resume.Education = "text";
         resume.WorkExperience ="text";
-        resume.DesiredSalary ="text";
+        resume.DesiredSalary = 45000;
         resume.Age = 31;
         resume.AdditionalInformation ="text";
         resume.PathToResumeTemplate ="text";
