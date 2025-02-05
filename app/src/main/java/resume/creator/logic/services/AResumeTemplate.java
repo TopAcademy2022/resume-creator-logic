@@ -1,4 +1,4 @@
-package resume.creator.logic.servises;
+package resume.creator.logic.services;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -57,7 +57,7 @@ public class AResumeTemplate {
         rezultMap.put("Age", String.valueOf(resume.Age));
         rezultMap.put("Education", resume.Education);
         rezultMap.put("WorkExperience", resume.WorkExperience);
-        rezultMap.put("DesiredSalary", resume.DesiredSalary);
+        rezultMap.put("DesiredSalary", String.valueOf(resume.DesiredSalary));
         rezultMap.put("AdditionalInformation", resume.AdditionalInformation);
 
         return rezultMap;

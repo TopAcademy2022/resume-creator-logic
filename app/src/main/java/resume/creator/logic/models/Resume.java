@@ -9,7 +9,7 @@ public class Resume {
 
     public String WorkExperience;
 
-    public String DesiredSalary;
+    public int DesiredSalary;
 
     public int Age;
 
