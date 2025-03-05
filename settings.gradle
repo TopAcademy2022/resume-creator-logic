@@ -1,0 +1,4 @@
+rootProject.name = 'resume-creator-logic'
+
+// Include subprojects
+include 'resume-creator-logic-domain', 'resume-creator-logic-infrastructure'

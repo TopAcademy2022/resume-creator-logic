@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+allprojects {
+    group = 'resume.creator.logic'
+    version = '0.5-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+}
+
+task buildDomain(type: GradleBuild) {
+    tasks = [':resume-creator-logic-domain:build']
+}
+
+task buildInfrastructure(type: GradleBuild) {
+    tasks = [':resume-creator-logic-infrastructure:build']
+}
