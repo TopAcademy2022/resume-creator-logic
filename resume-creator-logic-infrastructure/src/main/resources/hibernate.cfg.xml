@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Sqlite driver -->
+        <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
+        <!-- Database path -->
+        <property name="hibernate.connection.url">jdbc:sqlite:database.db</property>
+        <!-- Sqlite support -->
+        <property name="hibernate.dialect">org.hibernate.community.dialect.SQLiteDialect</property>
+        <!-- Autocreate tables -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+    </session-factory>
+</hibernate-configuration>
