@@ -14,14 +14,16 @@ public class ResumeService {
         return false;
     }
 
-    public boolean UpdateResume(Resume newResume, User user){
-        if (!user.Resume.contains(newResume)){
-            user.Resume.clear();
-            user.Resume.add(newResume);
-            
-            return true;
-        }
-        
-        return false;
+    public List<Resume> GetListResume(int user){
+        //List<Resume> resumes = user.Resume;
+        List<Resume> resumes = new ArrayList<Resume>();
+
+        Resume testResume = new Resume();
+        testResume.FIO = "Иванов Илья";
+        testResume.PathToFile = "./myfile.soprano";
+        testResume.PathToResumeTemplate = "./templates/mytemplate.docx";
+        resumes.add(testResume);
+
+        return resumes;
     }
 }
