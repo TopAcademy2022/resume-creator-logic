@@ -1,5 +1,8 @@
 package resume.creator.logic.services;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import resume.creator.logic.models.Resume;
 import resume.creator.logic.models.User;
 
